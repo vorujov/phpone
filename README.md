@@ -5,12 +5,12 @@ Simple and flexible PHP 5.6+ MVC micro-framework.
 
 Install with Composer.
 ```
-composer create-project --prefer-dist vroujov/phpone yourporject
+composer create-project --prefer-dist vorujov/phpone yourporject
 ```
 
 The command above will install the latest stable version. If you want to install the latest unreleased version (probably with some bugs or unfinished works) use following command:
 ```
-composer create-project --prefer-dist --stability=dev vroujov/phpone yourporject
+composer create-project --prefer-dist --stability=dev vorujov/phpone yourporject
 ```
 
 **yourproject** is the root directory name of your project.
