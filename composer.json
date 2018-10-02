@@ -12,5 +12,6 @@
     },
     "config": {
         "vendor-dir": "app/vendor"
-    }
+    },
+    "minimum-stability": "stable"
 }
