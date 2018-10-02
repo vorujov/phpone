@@ -1,7 +1,7 @@
 {
     "name": "vorujov/phpone",
     "type": "project",
-    "description" : "PHPOne is a simple and flexible PHP 5.6+ MVC micro-framework.",
+    "description" : "Simple and flexible PHP 5.6+ MVC micro-framework.",
     "keywords": ["application", "website", "development", "framework", "PHP", "PHP7"],
     "license": "MIT",
     "require": {
