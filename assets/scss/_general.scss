@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+
+    font-family: $font-family-primary;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include font-variant-ligatures(no-common-ligatures);
+}

@@ -1,0 +1,43 @@
+@mixin transition ($value, $property: 'transition') {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    #{$property}: $value;
+}
+
+@mixin transform ($value, $property: 'transform') {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    #{$property}: $value;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+@mixin box-sizing ($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin user-select ($type) {
+    -webkit-user-select: $type; 
+    -moz-user-select: $type; 
+    -ms-user-select: $type; 
+    user-select: $type;
+}
+
+@mixin appearance ($appearance) {
+    -webkit-appearance: $appearance;
+    -moz-appearance: $appearance;
+    appearance: $appearance;
+}
+
+@mixin font-variant-ligatures ($ligatures) {
+    -webkit-font-variant-ligatures: $ligatures; 
+    -moz-font-variant-ligatures: $ligatures; 
+    font-variant-ligatures: $ligatures; 
+}

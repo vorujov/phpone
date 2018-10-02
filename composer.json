@@ -1,0 +1,16 @@
+{
+    "name": "onelab/phpone",
+    "type": "project",
+    "description" : "PHPOne is a simple and flexible PHP 5.6+ MVC micro-framework.",
+    "keywords": ["application", "website", "development", "framework", "PHP", "PHP7"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6.0",
+        "altorouter/altorouter": "1.*",
+        "kint-php/kint": "*",
+        "gettext/gettext": "4.*"
+    },
+    "config": {
+        "vendor-dir": "app/vendor"
+    }
+}

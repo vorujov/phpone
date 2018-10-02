@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect to the HTTPS (SSL certiifcate must be installed)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect www to non-wwww
+    # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Redirect non-www to www
+    # RewriteCond %{HTTP_HOST} !^www\.
+    # RewriteRule .* http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

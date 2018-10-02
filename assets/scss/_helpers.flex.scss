@@ -1,0 +1,22 @@
+// Flex helper classes
+.flex { @include flexbox; }
+
+.flex-row { @include flex-direction(row); }
+.flex-col { @include flex-direction(column); }
+
+.flex-start { @include justify-content(flex-start); }
+.flex-center { @include justify-content(center); }
+.flex-end { @include justify-content(flex-end); }
+.flex-around { @include justify-content(space-around); }
+.flex-between { @include justify-content(space-between); }
+
+.flex-top { @include align-items(flex-start); }
+.flex-middle { @include align-items(center); }
+.flex-bottom { @include align-items(flex-end); }
+
+.flex-wrap { @include flex-wrap(wrap); }
+.flex-wrap-reverse { @include flex-wrap(wrap-reverse); }
+
+.flex-content-between { @include align-content(space-between); }
+
+.flex-grow { @include flex-grow(1); }

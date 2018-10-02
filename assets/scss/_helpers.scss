@@ -1,0 +1,60 @@
+/**
+ * Helper classes
+ */
+
+// Clearfix
+.clearfix { 
+    *zoom: 1; 
+
+    &:before,
+    &:after {
+        display: table; 
+        content: ""; 
+        line-height: 0;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// Align
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-just { text-align: justify; }
+
+.align-top { vertical-align: top;}
+.align-bottom { vertical-align: bottom;}
+.align-middle { vertical-align: middle;}
+.align-baseline { vertical-align: baseline; }
+
+// Typography
+.bold { font-weight: bold; }
+.regular { font-weight: normal; }
+.italic { font-style: italic; }
+
+// Text Controlls
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.break-word { word-wrap: break-word; }
+.no-wrap { white-space: nowrap !important; }
+
+// Display
+.inline { display: inline !important; }
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.none { display: none !important; }
+
+// Float
+.pull-left { float: left; }
+.pull-right { float: right; }
+
+// Position
+.fixed { position: fixed; }
+.relative { position: relative; }
+.absolute { position: absolute; }
