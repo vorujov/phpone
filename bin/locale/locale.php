@@ -4,7 +4,7 @@
  */
 
 // Path to root directory
-define("ROOT_PATH", __DIR__ . "/..");
+define("ROOT_PATH", __DIR__ . "/../..");
 
 // Path to app directory.
 define("APP_PATH", ROOT_PATH . "/app");
@@ -18,15 +18,21 @@ function absPath($path) {
     $path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
     $parts = array_filter(explode(DIRECTORY_SEPARATOR, $path), 'strlen');
     $absolutes = array();
+
     foreach ($parts as $part) {
-        if ('.' == $part) continue;
+        if ('.' == $part) {
+            continue;
+        } 
+
         if ('..' == $part) {
             array_pop($absolutes);
         } else {
             $absolutes[] = $part;
         }
     }
-    return ($path[0] == DIRECTORY_SEPARATOR ? DIRECTORY_SEPARATOR : "") . implode(DIRECTORY_SEPARATOR, $absolutes);
+
+    return ($path[0] == DIRECTORY_SEPARATOR ? DIRECTORY_SEPARATOR : "") 
+        . implode(DIRECTORY_SEPARATOR, $absolutes);
 }
 
 function getDirContents($dir, &$results = array()){
