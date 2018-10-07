@@ -90,6 +90,36 @@ class App extends Data
     }
 
     /**
+     * Setup database connection
+     * @return self 
+     */
+    protected function db()
+    {
+        $serviceContainer = \Propel\Runtime\Propel::getServiceContainer();
+        $serviceContainer->checkVersion('2.0.0-dev');
+        $serviceContainer->setAdapterClass('default', 'mysql');
+
+        $manager = new \Propel\Runtime\Connection\ConnectionManagerSingle();
+        $manager->setConfiguration(
+            [
+                'classname' => '\Propel\\Runtime\\Connection\\ConnectionWrapper',
+                'dsn' => 'mysql:host=' . DB_HOST . ';dbname='. DB_NAME .'',
+                'user' => DB_USER,
+                'password' => DB_PASS,
+                'settings' => [
+                    'charset' => DB_CHARSET,
+                    'queries' => []
+                ],
+                'model_paths' => []
+            ]
+        );
+
+        $manager->setName('default');
+        $serviceContainer->setConnectionManager('default', $manager);
+        $serviceContainer->setDefaultDatasource('default');
+    }
+
+    /**
      * Setup internationalization
      * @return self 
      */
@@ -154,6 +184,9 @@ class App extends Data
      */
     public function run()
     {
+        // Handle database connection
+        $this->db();
+        
         // Proceed the route
         $this->route();
 
