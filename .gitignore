@@ -3,3 +3,10 @@
 
 # Vendor
 app/vendor/
+
+# ORM generated files
+bin/orm/output
+
+# Models directory
+app/models/*
+!app/models/.gitkeep

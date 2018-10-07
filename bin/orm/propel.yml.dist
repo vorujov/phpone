@@ -1,0 +1,61 @@
+propel:
+  general:
+      project: My Project
+
+  ### Directories and Filenames ###
+  paths:
+      # Directory where the project files (`schema.xml`, etc.) are located.
+      # Default value is current path #
+      # projectDir:  
+
+      # The directory where Propel expects to find your `schema.xml` file.
+      # schemaDir: 
+
+      # The directory where Propel should output classes, sql, config, etc.
+      # Default value is current path #
+      # outputDir: 
+
+      # The directory where Propel should output generated object model classes.
+      # phpDir: 
+
+      # The directory where Propel should output the compiled runtime configuration.
+      # phpConfDir: 
+
+      # The directory where Propel should output the generated DDL (or data insert statements, etc.)
+      # sqlDir: 
+
+  ## All Database settings ##
+  database:
+      # All database sources
+      connections:
+          default:
+              adapter: mysql
+              # Connection class. One of the Propel\Runtime\Connection classes
+              classname: Propel\Runtime\Connection\ConnectionWrapper
+              # The PDO dsn
+              dsn: mysql:host=DB_HOST;dbname=DB_NAME
+              user: DB_USER
+              password: DB_PASS
+              
+              # Array of folders which include the models
+              model_paths:
+
+  ## Reverse settings
+  reverse:
+    # The connection to use to reverse the database
+    connection: default
+
+  ## Runtime settings ##
+  runtime:
+      defaultConnection: default
+      # Datasources as defined in database.connections
+      # This section affects config:convert command
+      connections:
+         - default
+
+  ## Generator settings ##
+  generator:
+      defaultConnection: default
+      # Datasources as defined in database.connections
+      connections:
+          - default

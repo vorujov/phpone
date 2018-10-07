@@ -8,7 +8,8 @@
         "php": ">=5.6.0",
         "altorouter/altorouter": "1.*",
         "kint-php/kint": "*",
-        "gettext/gettext": "4.*"
+        "gettext/gettext": "4.*",
+        "propel/propel": "~2.0@dev"
     },
     "config": {
         "vendor-dir": "app/vendor"
