@@ -1,4 +1,4 @@
-# PHPOne [![Releases](https://img.shields.io/badge/stable-v1.0.0-brightgreen.svg)](https://github.com/vorujov/phpone/releases) [![Packagist](https://img.shields.io/packagist/dt/vorujov/phpone.svg)](https://packagist.org/packages/vorujov/phpone) [![GitHub license](https://img.shields.io/github/license/vorujov/phpone.svg)](https://github.com/vorujov/phpone/blob/master/LICENSE)
+# PHPOne [![Releases](https://img.shields.io/github/release/vorujov/phpone.svg)](https://github.com/vorujov/phpone/releases) [![Packagist](https://img.shields.io/packagist/dt/vorujov/phpone.svg)](https://packagist.org/packages/vorujov/phpone) [![GitHub license](https://img.shields.io/github/license/vorujov/phpone.svg)](https://github.com/vorujov/phpone/blob/master/LICENSE)
 Simple and flexible PHP 5.6+ MVC micro-framework.
 
 ## Installation
