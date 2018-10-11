@@ -4,7 +4,7 @@
  */
 
 // Application version name
-define("APP_VERSION", "1.0.0"); 
+define("APP_VERSION", "1.0.1"); 
 
 // Used for cache control
 define("CACHE_CONTROL", base64_encode(str_replace(".", "", APP_VERSION))); 
