@@ -15,7 +15,7 @@ if (!function_exists("active_lang")) {
             return null;
         }
 
-        if (is_null($options)) {
+        if (is_null($option)) {
             return ACTIVE_LANG;
         }
 
@@ -87,9 +87,7 @@ if (!function_exists("is_valid_date")) {
          * @return boolean 
          */
         function is_valid_date($date, $format="d-m-Y"){
-            $d = DateTime::createFromFormat($format, $date);
+            $d = \DateTime::createFromFormat($format, $date);
             return $d && $d->format($format) === $date;
         }
-
 }
-

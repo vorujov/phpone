@@ -61,7 +61,7 @@ class Controller extends Data
             $data->{$key} = $value;
         }
 
-        $view  = new \Core\View($view, $view_in_context);
+        $view  = new View($view, $view_in_context);
         $view->render($data);
     }
 

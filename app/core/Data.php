@@ -3,8 +3,7 @@ namespace Core;
 
 /**
  * Data holder class;
- * Used to hold variables of the App and Controllers'
- * Uses magic __set() and __get() methods
+ * Used to hold variables of the App and Controllers
  */
 class Data
 {

@@ -14,7 +14,6 @@ define("ENVIRONMENT", "development");
 // subdirectories. Just the name of the domain. Ex: example.com
 define("DOMAIN", $_SERVER["SERVER_NAME"]);
 
-
 // Check if SSL enabled. 
 // Manually set the value of SSL_ENABLED to the true in case of use of fake SSL 
 // certificates such as Cloudflare's SSL
