@@ -1,7 +1,4 @@
 <?php
-// Start session
-session_start();
-
 /**
  * Define ENVIRONMENT. Affects error reporting
  * Possible values: development | production
