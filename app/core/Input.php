@@ -1,6 +1,8 @@
 <?php
 namespace Core;
 
+use \Utilities\Dot;
+
 /**
  * Get value of input (get, post, request, session, cookie) 
  */
@@ -22,13 +24,8 @@ class Input
             throw new \Exception('Invalid method!');
         }
 
-        $input = null;
         $method = "_".strtoupper($method);
-
-
-        if (isset($GLOBALS[$method][$key])) {
-            $input = $GLOBALS[$method][$key];
-        }
+        $input = Dot::get($GLOBALS[$method], $key);
 
         if (is_array($input) && is_int($index)){
             if ($index >= 0) {
@@ -53,7 +50,6 @@ class Input
         return $input;
     }
 
-
     /**
      * Magic method to call static method
      * @param  string $name     Name of the method
@@ -76,7 +72,6 @@ class Input
         }
     }
 
-
     /**
      * Magic method to call method
      * @param  string $name     Name of the method
@@ -98,5 +93,4 @@ class Input
             throw new \Exception(__CLASS__ . "::" . $name . "() method doesn't exist");
         }
     }
-
 }
